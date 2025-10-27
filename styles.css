@@ -1,0 +1,121 @@
+body {
+    /* background-image: url("background.png"); */
+    background-color: aqua;
+    width: vw;
+    margin: 0;
+    padding: 0;
+
+}
+
+.scene {
+    /* position: relative; */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dune {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+#background{
+    z-index: 5;
+    /* visibility: hidden; */
+}
+
+#d5{
+    z-index: 1;
+}
+#d4{
+    z-index: 3;
+}
+#d3{
+    z-index: 5;
+}
+#d2{
+    z-index: 7;
+}
+
+#d1{
+    z-index: 9;
+}
+
+#moon{
+    z-index: 19;
+}
+
+.moon{
+position: absolute;
+  top: 37px;
+  left: 611px;
+  max-width: 289px;
+  z-index: 20;
+}
+
+#ob1{
+position: absolute;
+  top: 461px;
+  left: 131px;
+  max-width: 110px;
+  z-index: 2;
+}
+
+#ob2{
+position: absolute;
+  top: 628px;
+  left: 284px;
+  max-width: 110px;
+  z-index: 4;
+}
+
+#ob3{
+position: absolute;
+  top: 624px;
+  left: 1253px;
+  max-width: 110px;
+  z-index: 4;
+}
+
+#ob4{
+position: absolute;
+  top: 777px;
+  left: 929px;
+  max-width: 110px;
+  z-index: 6;
+}
+
+#contact{
+position: absolute;
+  top: 353px;
+  left: 1149px;
+  max-width: 110px;
+  z-index: 0;
+}
+
+
+/* animation */
+
+.hoverable {
+  transition: transform 0.5s ease; 
+}
+
+.Obelisk {
+    transition: transform 1s ease;
+}
+
+.hoverable:hover {
+  transform: translateY(-10px) translateX(10px);
+    filter: brightness(0.5);
+}
+
+.Obelisk:hover {
+    transform: translateY(-200px);
+}
