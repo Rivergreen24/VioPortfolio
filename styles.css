@@ -1,121 +1,228 @@
 body {
-    /* background-image: url("background.png"); */
-    background-color: aqua;
-    width: vw;
-    margin: 0;
-    padding: 0;
+  /* background-image: url("background.png"); */
+  background-color: aqua;
+  width: vw;
+  margin: 0;
+  padding: 0;
 
 }
 
 .scene {
-    /* position: relative; */
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  /* position: relative; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .dune {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 
-#background{
-    z-index: 5;
-    /* visibility: hidden; */
+#background {
+  z-index: 5;
+  /* visibility: hidden; */
 }
 
-#d5{
-    z-index: 1;
-}
-#d4{
-    z-index: 3;
-}
-#d3{
-    z-index: 5;
-}
-#d2{
-    z-index: 7;
+#d5 {
+  z-index: 1;
 }
 
-#d1{
-    z-index: 9;
+#d4 {
+  z-index: 3;
 }
 
-#moon{
-    z-index: 19;
+#d3 {
+  z-index: 5;
 }
 
-.moon{
-position: absolute;
-  top: 37px;
-  left: 611px;
-  max-width: 289px;
+#d2 {
+  z-index: 7;
+}
+
+#d1 {
+  z-index: 9;
+}
+
+#d6 {
+  z-index: 11;
+}
+
+#d7 {
+  z-index: 13;
+}
+
+#d8 {
+  z-index: 15;
+}
+
+#d9 {
+  z-index: 17;
+}
+
+#d10 {
+  z-index: 19;
+}
+
+#moon {
+  z-index: 30;
+}
+
+.moon {
+  position: absolute;
+  top: 2.408vw;
+  left: 40%;
+  max-width: 18.81%;
   z-index: 20;
 }
 
-#ob1{
-position: absolute;
-  top: 461px;
-  left: 131px;
-  max-width: 110px;
+#Bio {
+  position: absolute;
+  top: 1.4vw;
+  left: 25%;
+  max-width: 48.8%;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  /* Prevent accidental clicks when invisible */
+}
+
+#Bio.seen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+#ob1 {
+  position: absolute;
+  top: 30.013vw;
+  left: 8.52%;
+  max-width: 7.1614%;
   z-index: 2;
 }
 
-#ob2{
-position: absolute;
-  top: 628px;
-  left: 284px;
-  max-width: 110px;
+#ob2 {
+  position: absolute;
+  top: 40.88vw;
+  left: 18.48%;
+  max-width: 7.1614%;
   z-index: 4;
 }
 
-#ob3{
-position: absolute;
-  top: 624px;
-  left: 1253px;
-  max-width: 110px;
+#ob3 {
+  position: absolute;
+  top: 40.62vw;
+  left: 81.57%;
+  max-width: 7.1614%;
   z-index: 4;
 }
 
-#ob4{
-position: absolute;
-  top: 777px;
-  left: 929px;
-  max-width: 110px;
+#ob4 {
+  position: absolute;
+  top: 50.58vw;
+  left: 60.48%;
+  max-width: 7.1614%;
   z-index: 6;
 }
 
-#contact{
-position: absolute;
-  top: 353px;
-  left: 1149px;
-  max-width: 110px;
+#contact {
+  position: absolute;
+  top: 22.981vw;
+  left: 75%;
+  max-width: 7%;
+  z-index: 0;
+}
+
+#contactCard {
+  position: absolute;
+  top: 7vw;
+  left: 75%;
+  max-width: 23%;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  /* Prevent accidental clicks when invisible */
+
   z-index: 0;
 }
 
 
+#contactCard.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* animation */
 
 .hoverable {
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
 
 .Obelisk {
-    transition: transform 1s ease;
+  transition: transform 1s ease;
 }
 
 .hoverable:hover {
-  transform: translateY(-10px) translateX(10px);
-    filter: brightness(0.5);
+  transform: translateY(-10px);
+  filter: brightness(0.5);
+  cursor: pointer;
 }
 
 .Obelisk:hover {
-    transform: translateY(-200px);
+  transform: translateY(-13.0208vw);
+  cursor: pointer;
+}
+
+#contact:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+
+
+
+
+/* vw = 100*px / 1536 */
+
+
+#logo {
+position: absolute;
+  top: 27vw;
+  left: 59.5%;
+  max-width: 19%;
+  z-index: 25;
+
+    opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#logo.visualise {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#shirt {
+position: absolute;
+top: 23vw;
+  left: 27.5%;
+  max-width: 23%;
+  z-index: 25;
+
+    opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#shirt.seeing {
+  opacity: 1;
+  pointer-events: auto;
 }
