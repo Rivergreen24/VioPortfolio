@@ -32,7 +32,7 @@ img {
 }
 
 #d5 {
-  z-index: 1;
+  z-index: 2;
 }
 
 #d4 {
@@ -138,7 +138,7 @@ img {
   top: 22.981vw;
   left: 75%;
   max-width: 7%;
-  z-index: 0;
+  z-index: 1;
 }
 
 #contactCard {
@@ -152,7 +152,7 @@ img {
   pointer-events: none;
   /* Prevent accidental clicks when invisible */
 
-  z-index: 0;
+  z-index: 25;
 }
 
 
@@ -195,8 +195,8 @@ img {
 
 #logo {
 position: absolute;
-  top: 27vw;
-  left: 59.5%;
+  top: 33vw;
+  left: 53.5%;
   max-width: 19%;
   z-index: 25;
 
@@ -210,10 +210,26 @@ position: absolute;
   pointer-events: auto;
 }
 
+#logoText {
+  position: absolute;
+  top: 55vw;
+  left: 49.5%;
+  max-width: 35%;
+  z-index: 25;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#logoText.visualise {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 #shirt {
 position: absolute;
-top: 23vw;
-  left: 27.5%;
+top: 27vw;
+  left: 23.5%;
   max-width: 23%;
   z-index: 25;
 
@@ -225,4 +241,48 @@ top: 23vw;
 #shirt.seeing {
   opacity: 1;
   pointer-events: auto;
+}
+
+#shirtText {
+position: absolute;
+top: 55vw;
+  left: 11.5%;
+  max-width: 35%;
+  z-index: 25;
+
+    opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#shirtText.seeing {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Signs of life aka stars */
+#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* stars shouldn’t block clicks */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 0.8vw; /* scale as needed */
+  opacity: 0;
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0; }
+  to   { opacity: 0.5; }
 }
